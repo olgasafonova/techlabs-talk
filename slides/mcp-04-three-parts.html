@@ -3,9 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1920, height=1080">
-  <title>Slide 04 - MCP: The Bridge</title>
+  <title>Slide 05 - The Three Parts</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
 
     body {
@@ -23,7 +28,8 @@
       height: 100%;
       display: grid;
       grid-template-columns: 80px 1fr 80px;
-      grid-template-rows: 80px auto 1fr auto 80px;
+      grid-template-rows: 80px auto 1fr 80px;
+      padding: 0;
     }
 
     .logo {
@@ -37,6 +43,17 @@
       height: 64px;
       width: 64px;
       display: block;
+    }
+
+    .tier-badge {
+      position: absolute;
+      top: 80px;
+      left: 80px;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #888;
     }
 
     .header {
@@ -62,7 +79,6 @@
       letter-spacing: -0.02em;
     }
 
-    /* Three-part diagram from MCP workshop */
     .diagram {
       grid-column: 2 / 3;
       grid-row: 3 / 4;
@@ -70,7 +86,7 @@
       align-items: flex-start;
       justify-content: flex-start;
       gap: 0;
-      padding-bottom: 40px;
+      padding-bottom: 80px;
     }
 
     .part {
@@ -137,7 +153,7 @@
       font-weight: 700;
     }
 
-    .part:nth-child(5) .example::before {
+    .part:nth-child(3) .example::before {
       color: #E53935;
     }
 
@@ -146,19 +162,8 @@
       color: #888;
       padding: 0 32px;
       font-weight: 300;
-      margin-top: 56px;
+      margin-top: 56px; /* center with 160px box */
     }
-
-    .bottom-note {
-      grid-column: 2 / 3;
-      grid-row: 4 / 5;
-      font-size: 24px;
-      color: #888;
-      line-height: 1.5;
-      padding-bottom: 16px;
-    }
-
-    .bottom-note strong { color: #1A1A1A; }
 
     .slide-number {
       position: absolute;
@@ -175,9 +180,10 @@
     <div class="logo">
       <img src="mcp-icon.svg" alt="MCP">
     </div>
+    <div class="tier-badge">Tier 1 / Explorer</div>
 
     <div class="header">
-      <div class="section-label">Model Context Protocol</div>
+      <div class="section-label">Architecture</div>
       <h1>How it works</h1>
     </div>
 
@@ -203,8 +209,8 @@
         </div>
         <div class="part-examples">
           <div class="example">Miro MCP Server</div>
+          <div class="example">Playwright MCP Server</div>
           <div class="example">GLEIF MCP Server</div>
-          <div class="example">Your own server</div>
         </div>
       </div>
 
@@ -217,15 +223,13 @@
         </div>
         <div class="part-examples">
           <div class="example">Miro</div>
-          <div class="example">Company database</div>
-          <div class="example">Any API</div>
+          <div class="example">Your browser</div>
+          <div class="example">GLEIF API</div>
         </div>
       </div>
     </div>
 
-    <div class="bottom-note"><strong>One standard, adopted by Anthropic, OpenAI, Google, Microsoft.</strong> Build one server; every AI client can use it.</div>
-
-    <div class="slide-number">4</div>
+    <div class="slide-number">5</div>
   </div>
 </body>
 </html>
