@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1920, height=1080">
-  <title>Slide 08 - The Compound Effect</title>
+  <title>Slide 08 - It Compounds</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
@@ -21,12 +21,12 @@
       width: 100%;
       height: 100%;
       display: grid;
-      grid-template-columns: 80px 1fr 1fr 80px;
+      grid-template-columns: 80px 1fr 80px;
       grid-template-rows: 80px auto 1fr 80px;
     }
 
     .section-label {
-      grid-column: 2 / 4;
+      grid-column: 2 / 3;
       grid-row: 2 / 3;
       font-size: 16px;
       font-weight: 600;
@@ -37,13 +37,13 @@
       padding-bottom: 48px;
     }
 
-    .left {
+    .content {
       grid-column: 2 / 3;
       grid-row: 3 / 4;
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      padding-right: 64px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-content: start;
     }
 
     .left h2 {
@@ -51,80 +51,38 @@
       font-weight: 900;
       line-height: 1.1;
       letter-spacing: -0.02em;
+      margin-bottom: 40px;
     }
 
     .left h2 .highlight { color: #E53935; }
 
     .left p {
       font-size: 28px;
-      color: #555;
-      line-height: 1.5;
-    }
-
-    .story {
-      background: #fff;
-      border-left: 4px solid #E53935;
-      padding: 28px 32px;
-      border-radius: 0 8px 8px 0;
-    }
-
-    .story .label {
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #E53935;
-      margin-bottom: 12px;
-    }
-
-    .story p {
-      font-size: 26px;
       color: #444;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
-    /* Right side: skills */
     .right {
-      grid-column: 3 / 4;
-      grid-row: 3 / 4;
       display: flex;
       flex-direction: column;
-      gap: 32px;
-      padding-left: 32px;
+      gap: 40px;
+      padding-top: 8px;
     }
 
-    .right h3 {
+    .step {
+      border-left: 4px solid #E53935;
+      padding-left: 24px;
+    }
+
+    .step-title {
       font-size: 32px;
-      font-weight: 700;
-      color: #888;
+      font-weight: 900;
+      margin-bottom: 8px;
     }
 
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .skill-tag {
-      font-family: 'Inter', sans-serif;
-      font-size: 24px;
-      font-weight: 600;
-      background: #F5F5F5;
-      color: #555;
-      padding: 12px 20px;
-      border-radius: 8px;
-      border: 2px solid #E0E0E0;
-    }
-
-    .skill-tag.accent {
-      background: #FFEBEE;
-      color: #C62828;
-      border-color: #FFCDD2;
-    }
-
-    .skills-note {
+    .step-desc {
       font-size: 26px;
-      color: #666;
+      color: #555;
       line-height: 1.4;
     }
 
@@ -140,32 +98,26 @@
 </head>
 <body>
   <div class="slide">
-    <div class="section-label">Compound Effect</div>
-    <div class="left">
-      <h2>AI gets better<br>the more you <span class="highlight">invest</span></h2>
-      <p>Every skill I build makes the next one faster. Every MCP server I connect gives AI more reach. It compounds.</p>
-      <div class="story">
-        <div class="label">Real example</div>
-        <p>I built SkillCheck as a side project using my own AI workflow. Validated it, shipped it, got my first paying customer. AI didn't build the product; it removed friction between ideas and execution.</p>
+    <div class="section-label">The Principle</div>
+    <div class="content">
+      <div class="left">
+        <h2>It <span class="highlight">compounds</span></h2>
+        <p>Every project teaches you something the next project needs. Every mistake sharpens your judgement. The tools change every six months. What compounds is you.</p>
       </div>
-    </div>
-    <div class="right">
-      <h3>50 skills, some of mine:</h3>
-      <div class="skills-grid">
-        <span class="skill-tag accent">slide-deck</span>
-        <span class="skill-tag">linkedin-post</span>
-        <span class="skill-tag accent">diagram</span>
-        <span class="skill-tag">deep-research</span>
-        <span class="skill-tag">youtube-transcript</span>
-        <span class="skill-tag accent">sift</span>
-        <span class="skill-tag">investigate</span>
-        <span class="skill-tag">feature-scoping</span>
-        <span class="skill-tag accent">brand-assets</span>
-        <span class="skill-tag">publish-docs</span>
-        <span class="skill-tag">edge-cases</span>
-        <span class="skill-tag accent">mcp-builder</span>
+      <div class="right">
+        <div class="step">
+          <div class="step-title">Try</div>
+          <div class="step-desc">Pick a real problem. Use AI to solve it. Ship something ugly.</div>
+        </div>
+        <div class="step">
+          <div class="step-title">Learn</div>
+          <div class="step-desc">Notice what AI got wrong. Figure out why. That's the actual skill.</div>
+        </div>
+        <div class="step">
+          <div class="step-title">Iterate</div>
+          <div class="step-desc">Next project goes faster because you know what to ask for and what to check.</div>
+        </div>
       </div>
-      <p class="skills-note">Each is a reusable recipe. AI reads it, executes the workflow. Write once, runs forever.</p>
     </div>
     <div class="slide-number">8</div>
   </div>
