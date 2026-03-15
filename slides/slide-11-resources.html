@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <title>Slide 11 - Resources</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #FAFAFA;
+      color: #1A1A1A;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 80px 1fr 80px;
+      grid-template-rows: 80px auto 1fr 80px;
+    }
+
+    .section-label {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #E53935;
+      padding-top: 40px;
+      padding-bottom: 48px;
+    }
+
+    .content {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-content: start;
+    }
+
+    .left h2 {
+      font-size: 48px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin-bottom: 48px;
+    }
+
+    .link-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .link-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .link-item .name {
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .link-item .url {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 18px;
+      color: #888;
+    }
+
+    .link-item .desc {
+      font-size: 20px;
+      color: #555;
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .right h3 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .tool-card {
+      background: #fff;
+      border: 1px solid #E0E0E0;
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .tool-card .name {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .tool-card .what {
+      font-size: 18px;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    .tool-card .cost {
+      font-size: 16px;
+      color: #888;
+      margin-top: 8px;
+    }
+
+    .slide-number {
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="section-label">Resources</div>
+    <div class="content">
+      <div class="left">
+        <h2>Where to go next</h2>
+        <div class="link-list">
+          <div class="link-item">
+            <div class="name">MCP Specification</div>
+            <div class="url">modelcontextprotocol.io</div>
+            <div class="desc">The open standard. Docs, examples, server directory.</div>
+          </div>
+          <div class="link-item">
+            <div class="name">My MCP servers</div>
+            <div class="url">github.com/olgasafonova</div>
+            <div class="desc">Open source. Read the code; build your own.</div>
+          </div>
+          <div class="link-item">
+            <div class="name">This presentation</div>
+            <div class="url">olgasafonova.github.io/techlabs-talk</div>
+            <div class="desc">All slides are HTML. View source to see how.</div>
+          </div>
+          <div class="link-item">
+            <div class="name">Ollama</div>
+            <div class="url">ollama.com</div>
+            <div class="desc">Run AI models locally. Free, private, offline.</div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <h3>Tools worth trying</h3>
+        <div class="tool-grid">
+          <div class="tool-card">
+            <div class="name">Claude</div>
+            <div class="what">Best for reasoning, code, long documents</div>
+            <div class="cost">Free tier available</div>
+          </div>
+          <div class="tool-card">
+            <div class="name">Cursor</div>
+            <div class="what">AI-first code editor. VS Code fork.</div>
+            <div class="cost">Free tier for students</div>
+          </div>
+          <div class="tool-card">
+            <div class="name">Perplexity</div>
+            <div class="what">Search with sources. Great for research.</div>
+            <div class="cost">Free tier available</div>
+          </div>
+          <div class="tool-card">
+            <div class="name">n8n</div>
+            <div class="what">Visual workflow automation. Self-hostable.</div>
+            <div class="cost">Free, open source</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-number">11</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <title>Slide 03 - The Gap</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #FAFAFA;
+      color: #1A1A1A;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 80px 1fr 80px;
+      grid-template-rows: 80px auto 1fr 80px;
+    }
+
+    .section-label {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #E53935;
+      padding-top: 40px;
+      padding-bottom: 48px;
+    }
+
+    .content {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 64px 1fr;
+      gap: 0;
+      align-items: start;
+    }
+
+    .column {
+      padding: 48px;
+      border-radius: 0;
+    }
+
+    .column-left {
+      border-left: 8px solid #CCC;
+    }
+
+    .column-right {
+      border-left: 8px solid #E53935;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .divider-arrow {
+      font-size: 48px;
+      color: #CCC;
+    }
+
+    .column h3 {
+      font-size: 36px;
+      font-weight: 900;
+      margin-bottom: 32px;
+      letter-spacing: -0.01em;
+    }
+
+    .column-left h3 { color: #888; }
+    .column-right h3 { color: #E53935; }
+
+    .column ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .column li {
+      font-size: 26px;
+      color: #444;
+      line-height: 1.4;
+      padding-left: 24px;
+      position: relative;
+    }
+
+    .column li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .column-left li::before { background: #CCC; }
+    .column-right li::before { background: #E53935; }
+
+    .punchline {
+      font-size: 40px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      max-width: 1200px;
+    }
+
+    .punchline .highlight { color: #E53935; }
+
+    .slide-number {
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="section-label">The Gap</div>
+    <div class="content">
+      <div class="columns">
+        <div class="column column-left">
+          <h3>What most people do</h3>
+          <ul>
+            <li>Ask ChatGPT a question</li>
+            <li>Copy-paste the answer</li>
+            <li>Maybe use Copilot in VS Code</li>
+            <li>Generate an image or two</li>
+          </ul>
+        </div>
+        <div class="divider">
+          <span class="divider-arrow">→</span>
+        </div>
+        <div class="column column-right">
+          <h3>What's possible now</h3>
+          <ul>
+            <li>AI queries live databases for you</li>
+            <li>AI creates a workshop board in Miro</li>
+            <li>AI edits your code and runs your tests</li>
+            <li>AI chains 50 skills into a workflow</li>
+          </ul>
+        </div>
+      </div>
+      <p class="punchline">The difference? AI that <span class="highlight">acts</span>, not just AI that answers.</p>
+    </div>
+    <div class="slide-number">3</div>
+  </div>
+</body>
+</html>

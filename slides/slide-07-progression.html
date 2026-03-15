@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <title>Slide 07 - The Progression</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #FAFAFA;
+      color: #1A1A1A;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 80px 1fr 80px;
+      grid-template-rows: 80px auto 1fr 80px;
+    }
+
+    .section-label {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #E53935;
+      padding-top: 40px;
+      padding-bottom: 48px;
+    }
+
+    .content {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    h2 {
+      font-size: 48px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+
+    /* Timeline */
+    .timeline {
+      display: flex;
+      gap: 0;
+      align-items: flex-start;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 48px;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(to right, #CCC 0%, #E53935 100%);
+    }
+
+    .stage {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      padding: 0 16px;
+    }
+
+    .stage-dot {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #CCC;
+      margin-bottom: 20px;
+      z-index: 1;
+      margin-top: 36px;
+    }
+
+    .stage:last-child .stage-dot { background: #E53935; }
+    .stage:nth-child(3) .stage-dot { background: #E57373; }
+    .stage:nth-child(4) .stage-dot { background: #E53935; }
+
+    .stage-level {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 8px;
+    }
+
+    .stage-title {
+      font-size: 28px;
+      font-weight: 900;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .stage-examples {
+      font-size: 20px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .stage-tools {
+      margin-top: 16px;
+      font-size: 18px;
+      color: #888;
+      font-style: italic;
+    }
+
+    .bottom-note {
+      font-size: 28px;
+      color: #555;
+      line-height: 1.5;
+      max-width: 1200px;
+    }
+
+    .bottom-note strong { color: #1A1A1A; }
+
+    .slide-number {
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="section-label">The Progression</div>
+    <div class="content">
+      <h2>Everyone starts at Level 1. The question is whether you keep going.</h2>
+
+      <div class="timeline">
+        <div class="stage">
+          <div class="stage-dot"></div>
+          <div class="stage-level">Level 1</div>
+          <div class="stage-title">Chat</div>
+          <div class="stage-examples">Ask a question<br>Get an answer<br>Copy-paste it</div>
+          <div class="stage-tools">ChatGPT, Claude</div>
+        </div>
+        <div class="stage">
+          <div class="stage-dot"></div>
+          <div class="stage-level">Level 2</div>
+          <div class="stage-title">Assist</div>
+          <div class="stage-examples">AI in your editor<br>Autocomplete code<br>Explain functions</div>
+          <div class="stage-tools">Copilot, Cursor</div>
+        </div>
+        <div class="stage">
+          <div class="stage-dot"></div>
+          <div class="stage-level">Level 3</div>
+          <div class="stage-title">Agent</div>
+          <div class="stage-examples">AI runs tasks<br>Edits multiple files<br>Calls external APIs</div>
+          <div class="stage-tools">Claude Code, MCP</div>
+        </div>
+        <div class="stage">
+          <div class="stage-dot"></div>
+          <div class="stage-level">Level 4</div>
+          <div class="stage-title">System</div>
+          <div class="stage-examples">Skills chain together<br>AI learns your patterns<br>Compounds over time</div>
+          <div class="stage-tools">Custom skills, workflows</div>
+        </div>
+      </div>
+
+      <p class="bottom-note"><strong>You don't need Level 4 to be effective.</strong> Most of my productivity comes from Levels 2 and 3. But knowing the progression helps you invest in the right skills.</p>
+    </div>
+    <div class="slide-number">7</div>
+  </div>
+</body>
+</html>

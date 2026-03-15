@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <title>Slide 05 - Demo: Live API</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #FAFAFA;
+      color: #1A1A1A;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 80px 1fr 80px;
+      grid-template-rows: 80px auto 1fr 80px;
+    }
+
+    .section-label {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #E53935;
+      padding-top: 40px;
+      padding-bottom: 48px;
+    }
+
+    .content {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-content: start;
+    }
+
+    .left h2 {
+      font-size: 48px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 32px;
+    }
+
+    .left h2 .highlight { color: #E53935; }
+
+    .prompt-box {
+      background: #1A1A1A;
+      color: #E0E0E0;
+      border-radius: 12px;
+      padding: 32px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 22px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .prompt-box .user-prompt {
+      color: #81C784;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      font-size: 24px;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    .step-num {
+      background: #E53935;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* Demo area - placeholder for GIF */
+    .demo-area {
+      background: #1A1A1A;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 500px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .demo-area img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .demo-placeholder {
+      color: #555;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .demo-placeholder .live-badge {
+      display: inline-block;
+      background: #E53935;
+      color: white;
+      padding: 8px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .slide-number {
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="section-label">Demo 1</div>
+    <div class="content">
+      <div class="left">
+        <h2>AI queries a <span class="highlight">live database</span></h2>
+        <div class="prompt-box">
+          <span class="user-prompt">&gt; Who is Apple Inc, legally?<br>&gt; Give me their global identifier.</span>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>I type a plain English question</div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>AI calls the GLEIF API (2.8M companies, 200+ countries)</div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>Returns structured data: legal name, registration, status</div>
+          </div>
+        </div>
+      </div>
+      <div class="demo-area">
+        <!-- Replace with GIF: demos/gleif-demo.gif -->
+        <div class="demo-placeholder">
+          <div class="live-badge">LIVE DEMO</div>
+          <p>AI → GLEIF API → Company data<br><br>
+          No web search. Direct API call.<br>
+          Real data, not a summary of a webpage.</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-number">5</div>
+  </div>
+</body>
+</html>

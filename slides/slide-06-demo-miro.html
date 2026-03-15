@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <title>Slide 06 - Demo: Miro</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #FAFAFA;
+      color: #1A1A1A;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 80px 1fr 80px;
+      grid-template-rows: 80px auto 1fr 80px;
+    }
+
+    .section-label {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #E53935;
+      padding-top: 40px;
+      padding-bottom: 48px;
+    }
+
+    .content {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-content: start;
+    }
+
+    .left h2 {
+      font-size: 48px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 32px;
+    }
+
+    .left h2 .highlight { color: #E53935; }
+
+    .prompt-box {
+      background: #1A1A1A;
+      color: #E0E0E0;
+      border-radius: 12px;
+      padding: 32px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 22px;
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .prompt-box .user-prompt {
+      color: #81C784;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      font-size: 24px;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    .step-num {
+      background: #E53935;
+      color: white;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .demo-area {
+      background: #1A1A1A;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 500px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .demo-placeholder {
+      color: #555;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .demo-placeholder .live-badge {
+      display: inline-block;
+      background: #E53935;
+      color: white;
+      padding: 8px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .slide-number {
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="section-label">Demo 2</div>
+    <div class="content">
+      <div class="left">
+        <h2>AI builds a <span class="highlight">whiteboard</span></h2>
+        <div class="prompt-box">
+          <span class="user-prompt">&gt; Set up a retro board with<br>&gt; three columns: What went well,<br>&gt; What to improve, Action items</span>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div>I describe what I want in plain English</div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div>AI creates frames, stickies, and organizes them</div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div>Real Miro board, ready to use with your team</div>
+          </div>
+        </div>
+      </div>
+      <div class="demo-area">
+        <!-- Replace with GIF: demos/miro-demo.gif -->
+        <div class="demo-placeholder">
+          <div class="live-badge">LIVE DEMO</div>
+          <p>AI → Miro API → Board appears<br><br>
+          88 tools: stickies, shapes, frames,<br>
+          connectors, mind maps, flowcharts.<br><br>
+          Same MCP standard. Different app.</p>
+        </div>
+      </div>
+    </div>
+    <div class="slide-number">6</div>
+  </div>
+</body>
+</html>

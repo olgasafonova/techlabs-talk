@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <title>Slide 02 - Who I Am</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #FAFAFA;
+      color: #1A1A1A;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 80px 1fr 80px;
+      grid-template-rows: 80px auto 1fr 80px;
+    }
+
+    .section-label {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #E53935;
+      padding-top: 40px;
+      padding-bottom: 48px;
+    }
+
+    .content {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-content: start;
+    }
+
+    .left h2 {
+      font-size: 56px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 40px;
+    }
+
+    .left h2 .muted { color: #888; }
+
+    .left p {
+      font-size: 26px;
+      color: #555;
+      line-height: 1.5;
+      max-width: 600px;
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      padding-top: 8px;
+    }
+
+    .fact {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .fact-number {
+      font-size: 48px;
+      font-weight: 900;
+      color: #E53935;
+      line-height: 1;
+      min-width: 100px;
+    }
+
+    .fact-text {
+      font-size: 24px;
+      color: #444;
+      line-height: 1.4;
+      padding-top: 8px;
+    }
+
+    .fact-text strong {
+      color: #1A1A1A;
+    }
+
+    .slide-number {
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="section-label">Who I Am</div>
+    <div class="content">
+      <div class="left">
+        <h2>Product manager<br><span class="muted">who writes code</span></h2>
+        <p>Lead PM at Tieto. I build document management systems for governments. I use AI tools every day to ship real work, not to write blog posts about AI.</p>
+      </div>
+      <div class="right">
+        <div class="fact">
+          <div class="fact-number">10+</div>
+          <div class="fact-text"><strong>MCP servers built</strong><br>Open source, in Go</div>
+        </div>
+        <div class="fact">
+          <div class="fact-number">50</div>
+          <div class="fact-text"><strong>Custom AI skills</strong><br>That chain together daily</div>
+        </div>
+        <div class="fact">
+          <div class="fact-number">88</div>
+          <div class="fact-text"><strong>Tools in one server</strong><br>Miro whiteboard control</div>
+        </div>
+        <div class="fact">
+          <div class="fact-number">1</div>
+          <div class="fact-text"><strong>Product shipped</strong><br>Side project to first sale</div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-number">2</div>
+  </div>
+</body>
+</html>

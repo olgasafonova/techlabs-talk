@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <title>Slide 09 - For Your Projects</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #FAFAFA;
+      color: #1A1A1A;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 80px 1fr 80px;
+      grid-template-rows: 80px auto 1fr 80px;
+    }
+
+    .section-label {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #E53935;
+      padding-top: 40px;
+      padding-bottom: 48px;
+    }
+
+    .content {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    h2 {
+      font-size: 48px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+
+    .moves {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 48px;
+    }
+
+    .move {
+      border-top: 4px solid #E53935;
+      padding-top: 32px;
+    }
+
+    .move-number {
+      font-size: 56px;
+      font-weight: 900;
+      color: #E53935;
+      margin-bottom: 16px;
+    }
+
+    .move h3 {
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .move p {
+      font-size: 22px;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .move .tool {
+      font-size: 18px;
+      color: #888;
+      font-style: italic;
+    }
+
+    .bottom-note {
+      font-size: 26px;
+      color: #444;
+      line-height: 1.5;
+      border-left: 4px solid #E53935;
+      padding-left: 24px;
+    }
+
+    .slide-number {
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="section-label">For Your Projects</div>
+    <div class="content">
+      <h2>Three moves you can make this week</h2>
+
+      <div class="moves">
+        <div class="move">
+          <div class="move-number">01</div>
+          <h3>Use AI as a thinking partner</h3>
+          <p>Don't ask "write my code." Ask "here's my approach; what am I missing?" Feed it your project context. Challenge its answers. The better your input, the better the output.</p>
+          <div class="tool">Claude, ChatGPT (free tiers work)</div>
+        </div>
+        <div class="move">
+          <div class="move-number">02</div>
+          <h3>Prototype in hours, not weeks</h3>
+          <p>Describe what you want in plain language. Get an ugly first version. Then iterate: "add error handling," "make the API cleaner," "add tests." Ship rough, refine fast.</p>
+          <div class="tool">Cursor, Claude Code, GitHub Copilot</div>
+        </div>
+        <div class="move">
+          <div class="move-number">03</div>
+          <h3>Connect AI to your stack</h3>
+          <p>Pick one tool your team uses. Find or build an MCP server for it. Now AI doesn't just answer questions about your project; it can act on it.</p>
+          <div class="tool">MCP servers, n8n, APIs</div>
+        </div>
+      </div>
+
+      <p class="bottom-note">The skill isn't prompting. The skill is knowing which AI output is good and which is wrong. That comes from building, not from watching tutorials.</p>
+    </div>
+    <div class="slide-number">9</div>
+  </div>
+</body>
+</html>

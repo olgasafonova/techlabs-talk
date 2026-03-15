@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <title>Slide 04 - MCP: The Bridge</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #FAFAFA;
+      color: #1A1A1A;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 80px 1fr 80px;
+      grid-template-rows: 80px auto 1fr 80px;
+    }
+
+    .section-label {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #E53935;
+      padding-top: 40px;
+      padding-bottom: 48px;
+    }
+
+    .content {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+    }
+
+    h2 {
+      font-size: 56px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    h2 .sub {
+      font-size: 32px;
+      font-weight: 400;
+      color: #888;
+      display: block;
+      margin-top: 12px;
+    }
+
+    /* Diagram */
+    .diagram {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      padding: 48px 0;
+    }
+
+    .diagram-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .diagram-box .icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+    }
+
+    .diagram-box .label {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .diagram-box .desc {
+      font-size: 20px;
+      color: #888;
+      text-align: center;
+      max-width: 200px;
+    }
+
+    .icon-client { background: #E8EAF6; }
+    .icon-server { background: #FFEBEE; }
+    .icon-app { background: #E8F5E9; }
+
+    .diagram-arrow {
+      font-size: 40px;
+      color: #CCC;
+      padding: 0 48px;
+      margin-bottom: 48px;
+    }
+
+    .explanation {
+      font-size: 28px;
+      color: #555;
+      line-height: 1.6;
+      max-width: 1200px;
+    }
+
+    .explanation strong { color: #1A1A1A; }
+
+    .slide-number {
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="section-label">Model Context Protocol</div>
+    <div class="content">
+      <h2>MCP: the bridge<span class="sub">One standard that lets any AI talk to any app</span></h2>
+
+      <div class="diagram">
+        <div class="diagram-box">
+          <div class="icon icon-client">🤖</div>
+          <div class="label">Client</div>
+          <div class="desc">Claude, ChatGPT, Cursor, VS Code</div>
+        </div>
+        <div class="diagram-arrow">→</div>
+        <div class="diagram-box">
+          <div class="icon icon-server">⚡</div>
+          <div class="label">Server</div>
+          <div class="desc">Small program that translates</div>
+        </div>
+        <div class="diagram-arrow">→</div>
+        <div class="diagram-box">
+          <div class="icon icon-app">🌍</div>
+          <div class="label">App</div>
+          <div class="desc">Miro, databases, APIs, your browser</div>
+        </div>
+      </div>
+
+      <p class="explanation">
+        <strong>Before MCP:</strong> every AI + app combo needed custom code.<br>
+        <strong>With MCP:</strong> build one server, every AI client can use it. Open standard by Anthropic, adopted by OpenAI, Google, Microsoft.
+      </p>
+    </div>
+    <div class="slide-number">4</div>
+  </div>
+</body>
+</html>

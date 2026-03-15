@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <title>Slide 10 - What Doesn't Work</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #1A1A1A;
+      color: #FAFAFA;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 80px 1fr 80px;
+      grid-template-rows: 80px auto 1fr 80px;
+    }
+
+    .section-label {
+      grid-column: 2 / 3;
+      grid-row: 2 / 3;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #E53935;
+      padding-top: 40px;
+      padding-bottom: 48px;
+    }
+
+    .content {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+    }
+
+    h2 {
+      font-size: 56px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .fails {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .fail {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .fail-icon {
+      font-size: 32px;
+      flex-shrink: 0;
+      width: 48px;
+      text-align: center;
+      line-height: 1;
+      padding-top: 4px;
+    }
+
+    .fail h3 {
+      font-size: 26px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #E0E0E0;
+    }
+
+    .fail p {
+      font-size: 22px;
+      color: #888;
+      line-height: 1.4;
+    }
+
+    .bottom {
+      font-size: 32px;
+      font-weight: 700;
+      color: #E53935;
+    }
+
+    .slide-number {
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="section-label">Honest Warnings</div>
+    <div class="content">
+      <h2>What doesn't work</h2>
+      <div class="fails">
+        <div class="fail">
+          <div class="fail-icon">&#x2715;</div>
+          <div>
+            <h3>Shipping code you don't understand</h3>
+            <p>AI can write it. You still need to debug it, maintain it, and explain it to your team.</p>
+          </div>
+        </div>
+        <div class="fail">
+          <div class="fail-icon">&#x2715;</div>
+          <div>
+            <h3>Trusting AI with facts</h3>
+            <p>It hallucinates citations, invents API endpoints, and gets math wrong. Always verify.</p>
+          </div>
+        </div>
+        <div class="fail">
+          <div class="fail-icon">&#x2715;</div>
+          <div>
+            <h3>Pasting secrets into cloud AI</h3>
+            <p>API keys, personal data, credentials. Don't. Use local models (Ollama) for sensitive work.</p>
+          </div>
+        </div>
+        <div class="fail">
+          <div class="fail-icon">&#x2715;</div>
+          <div>
+            <h3>Expecting perfection on first prompt</h3>
+            <p>AI works best through iteration. Start rough, give feedback, refine. Treat it like a conversation, not a search engine.</p>
+          </div>
+        </div>
+      </div>
+      <p class="bottom">AI is a power tool. Power tools are great if you know what you're building.</p>
+    </div>
+    <div class="slide-number">10</div>
+  </div>
+</body>
+</html>
