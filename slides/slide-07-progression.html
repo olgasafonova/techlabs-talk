@@ -22,7 +22,7 @@
       height: 100%;
       display: grid;
       grid-template-columns: 80px 1fr 80px;
-      grid-template-rows: 80px auto 1fr 80px;
+      grid-template-rows: 80px auto 1fr auto 80px;
     }
 
     .section-label {
@@ -37,61 +37,22 @@
       padding-bottom: 48px;
     }
 
-    .content {
+    .stages {
       grid-column: 2 / 3;
       grid-row: 3 / 4;
-      display: flex;
-      flex-direction: column;
-      gap: 48px;
-    }
-
-    h2 {
-      font-size: 48px;
-      font-weight: 900;
-      letter-spacing: -0.02em;
-    }
-
-    /* Timeline */
-    .timeline {
-      display: flex;
-      gap: 0;
-      align-items: flex-start;
-      position: relative;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      top: 48px;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(to right, #CCC 0%, #E53935 100%);
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 32px;
+      align-content: start;
     }
 
     .stage {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      position: relative;
-      padding: 0 16px;
+      border-top: 6px solid #CCC;
+      padding-top: 32px;
     }
 
-    .stage-dot {
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      background: #CCC;
-      margin-bottom: 20px;
-      z-index: 1;
-      margin-top: 36px;
-    }
-
-    .stage:last-child .stage-dot { background: #E53935; }
-    .stage:nth-child(3) .stage-dot { background: #E57373; }
-    .stage:nth-child(4) .stage-dot { background: #E53935; }
+    .stage:nth-child(3) { border-color: #E57373; }
+    .stage:nth-child(4) { border-color: #E53935; }
 
     .stage-level {
       font-size: 16px;
@@ -99,34 +60,35 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #888;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
 
     .stage-title {
-      font-size: 28px;
+      font-size: 48px;
       font-weight: 900;
-      margin-bottom: 16px;
-      letter-spacing: -0.01em;
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
     }
 
-    .stage-examples {
-      font-size: 20px;
-      color: #666;
-      line-height: 1.5;
+    .stage-desc {
+      font-size: 28px;
+      color: #555;
+      line-height: 1.4;
+      margin-bottom: 24px;
     }
 
     .stage-tools {
-      margin-top: 16px;
-      font-size: 18px;
+      font-size: 24px;
       color: #888;
-      font-style: italic;
     }
 
     .bottom-note {
+      grid-column: 2 / 3;
+      grid-row: 4 / 5;
       font-size: 28px;
       color: #555;
       line-height: 1.5;
-      max-width: 1200px;
+      padding-bottom: 16px;
     }
 
     .bottom-note strong { color: #1A1A1A; }
@@ -144,42 +106,33 @@
 <body>
   <div class="slide">
     <div class="section-label">The Progression</div>
-    <div class="content">
-      <h2>Everyone starts at Level 1. The question is whether you keep going.</h2>
-
-      <div class="timeline">
-        <div class="stage">
-          <div class="stage-dot"></div>
-          <div class="stage-level">Level 1</div>
-          <div class="stage-title">Chat</div>
-          <div class="stage-examples">Ask a question<br>Get an answer<br>Copy-paste it</div>
-          <div class="stage-tools">ChatGPT, Claude</div>
-        </div>
-        <div class="stage">
-          <div class="stage-dot"></div>
-          <div class="stage-level">Level 2</div>
-          <div class="stage-title">Assist</div>
-          <div class="stage-examples">AI in your editor<br>Autocomplete code<br>Explain functions</div>
-          <div class="stage-tools">Copilot, Cursor</div>
-        </div>
-        <div class="stage">
-          <div class="stage-dot"></div>
-          <div class="stage-level">Level 3</div>
-          <div class="stage-title">Agent</div>
-          <div class="stage-examples">AI runs tasks<br>Edits multiple files<br>Calls external APIs</div>
-          <div class="stage-tools">Claude Code, MCP</div>
-        </div>
-        <div class="stage">
-          <div class="stage-dot"></div>
-          <div class="stage-level">Level 4</div>
-          <div class="stage-title">System</div>
-          <div class="stage-examples">Skills chain together<br>AI learns your patterns<br>Compounds over time</div>
-          <div class="stage-tools">Custom skills, workflows</div>
-        </div>
+    <div class="stages">
+      <div class="stage">
+        <div class="stage-level">Level 1</div>
+        <div class="stage-title">Chat</div>
+        <div class="stage-desc">Ask a question, get an answer, copy-paste it</div>
+        <div class="stage-tools">ChatGPT, Claude</div>
       </div>
-
-      <p class="bottom-note"><strong>You don't need Level 4 to be effective.</strong> Most of my productivity comes from Levels 2 and 3. But knowing the progression helps you invest in the right skills.</p>
+      <div class="stage">
+        <div class="stage-level">Level 2</div>
+        <div class="stage-title">Assist</div>
+        <div class="stage-desc">AI in your editor, autocomplete, explain code</div>
+        <div class="stage-tools">Copilot, Cursor</div>
+      </div>
+      <div class="stage">
+        <div class="stage-level">Level 3</div>
+        <div class="stage-title">Agent</div>
+        <div class="stage-desc">AI runs tasks, edits files, calls external APIs</div>
+        <div class="stage-tools">Claude Code, MCP</div>
+      </div>
+      <div class="stage">
+        <div class="stage-level">Level 4</div>
+        <div class="stage-title">System</div>
+        <div class="stage-desc">Skills chain together, AI learns your patterns</div>
+        <div class="stage-tools">Custom skills, workflows</div>
+      </div>
     </div>
+    <p class="bottom-note"><strong>You don't need Level 4 to be effective.</strong> Most of my productivity comes from Levels 2 and 3.</p>
     <div class="slide-number">7</div>
   </div>
 </body>

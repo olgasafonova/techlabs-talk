@@ -22,7 +22,7 @@
       height: 100%;
       display: grid;
       grid-template-columns: 80px 1fr 80px;
-      grid-template-rows: 80px auto 1fr 80px;
+      grid-template-rows: 80px auto 1fr auto 80px;
     }
 
     .section-label {
@@ -37,59 +37,50 @@
       padding-bottom: 48px;
     }
 
-    .content {
+    .fails {
       grid-column: 2 / 3;
       grid-row: 3 / 4;
-      display: flex;
-      flex-direction: column;
-      gap: 56px;
-    }
-
-    h2 {
-      font-size: 56px;
-      font-weight: 900;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-    }
-
-    .fails {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 40px;
+      gap: 48px;
+      align-content: start;
     }
 
     .fail {
       display: flex;
-      gap: 20px;
+      gap: 24px;
       align-items: flex-start;
     }
 
-    .fail-icon {
-      font-size: 32px;
+    .fail-x {
+      font-size: 40px;
+      color: #E53935;
+      font-weight: 900;
       flex-shrink: 0;
-      width: 48px;
-      text-align: center;
       line-height: 1;
       padding-top: 4px;
     }
 
     .fail h3 {
-      font-size: 26px;
+      font-size: 32px;
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       color: #E0E0E0;
     }
 
     .fail p {
-      font-size: 22px;
+      font-size: 28px;
       color: #888;
       line-height: 1.4;
     }
 
     .bottom {
-      font-size: 32px;
+      grid-column: 2 / 3;
+      grid-row: 4 / 5;
+      font-size: 36px;
       font-weight: 700;
       color: #E53935;
+      padding-bottom: 16px;
     }
 
     .slide-number {
@@ -105,41 +96,38 @@
 <body>
   <div class="slide">
     <div class="section-label">Honest Warnings</div>
-    <div class="content">
-      <h2>What doesn't work</h2>
-      <div class="fails">
-        <div class="fail">
-          <div class="fail-icon">&#x2715;</div>
-          <div>
-            <h3>Shipping code you don't understand</h3>
-            <p>AI can write it. You still need to debug it, maintain it, and explain it to your team.</p>
-          </div>
-        </div>
-        <div class="fail">
-          <div class="fail-icon">&#x2715;</div>
-          <div>
-            <h3>Trusting AI with facts</h3>
-            <p>It hallucinates citations, invents API endpoints, and gets math wrong. Always verify.</p>
-          </div>
-        </div>
-        <div class="fail">
-          <div class="fail-icon">&#x2715;</div>
-          <div>
-            <h3>Pasting secrets into cloud AI</h3>
-            <p>API keys, personal data, credentials. Don't. Use local models (Ollama) for sensitive work.</p>
-          </div>
-        </div>
-        <div class="fail">
-          <div class="fail-icon">&#x2715;</div>
-          <div>
-            <h3>Expecting perfection on first prompt</h3>
-            <p>AI works best through iteration. Start rough, give feedback, refine. Treat it like a conversation, not a search engine.</p>
-          </div>
+    <div class="fails">
+      <div class="fail">
+        <div class="fail-x">&#x2715;</div>
+        <div>
+          <h3>Shipping code you don't understand</h3>
+          <p>AI can write it. You still need to debug it, maintain it, explain it.</p>
         </div>
       </div>
-      <p class="bottom">AI is a power tool. Power tools are great if you know what you're building.</p>
+      <div class="fail">
+        <div class="fail-x">&#x2715;</div>
+        <div>
+          <h3>Trusting AI with facts</h3>
+          <p>It hallucinates citations, invents endpoints, gets math wrong. Always verify.</p>
+        </div>
+      </div>
+      <div class="fail">
+        <div class="fail-x">&#x2715;</div>
+        <div>
+          <h3>Pasting secrets into cloud AI</h3>
+          <p>API keys, personal data, credentials. Use local models for sensitive work.</p>
+        </div>
+      </div>
+      <div class="fail">
+        <div class="fail-x">&#x2715;</div>
+        <div>
+          <h3>Expecting perfection on first prompt</h3>
+          <p>AI works through iteration. Start rough, give feedback, refine.</p>
+        </div>
+      </div>
     </div>
-    <div class="slide-number">11</div>
+    <p class="bottom">AI is a power tool. Power tools are great if you know what you're building.</p>
+    <div class="slide-number">12</div>
   </div>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1920, height=1080">
-  <title>Slide 08b - KanaDojo</title>
+  <title>Slide 08c - Lazgi Hands</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
@@ -12,8 +12,8 @@
       width: 1920px;
       height: 1080px;
       font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background: #FAFAFA;
-      color: #1A1A1A;
+      background: #1A1A1A;
+      color: #FAFAFA;
       overflow: hidden;
     }
 
@@ -55,9 +55,17 @@
 
     .left h2 .highlight { color: #E53935; }
 
+    .tagline {
+      font-size: 32px;
+      font-weight: 400;
+      color: #888;
+      line-height: 1.4;
+      font-style: italic;
+    }
+
     .left p {
       font-size: 28px;
-      color: #555;
+      color: #AAA;
       line-height: 1.5;
     }
 
@@ -70,41 +78,19 @@
     .tech-tag {
       font-size: 24px;
       font-weight: 600;
-      background: #F5F5F5;
-      color: #555;
+      background: #2A2A2A;
+      color: #AAA;
       padding: 12px 20px;
       border-radius: 8px;
-      border: 2px solid #E0E0E0;
-    }
-
-    .story {
-      background: #fff;
-      border-left: 4px solid #E53935;
-      padding: 28px 32px;
-      border-radius: 0 8px 8px 0;
-    }
-
-    .story .label {
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #E53935;
-      margin-bottom: 12px;
-    }
-
-    .story p {
-      font-size: 26px;
-      color: #444;
-      line-height: 1.5;
+      border: 2px solid #333;
     }
 
     .url {
       font-size: 26px;
-      color: #888;
+      color: #666;
     }
 
-    /* App preview */
+    /* Right: demo area */
     .right {
       grid-column: 3 / 4;
       grid-row: 3 / 4;
@@ -114,48 +100,39 @@
       padding-left: 32px;
     }
 
-    .app-frame {
-      width: 440px;
-      height: 780px;
-      background: #1A1A1A;
-      border-radius: 32px;
+    .demo-frame {
+      width: 600px;
+      height: 700px;
+      background: #000;
+      border-radius: 16px;
       overflow: hidden;
-      box-shadow: 0 24px 64px rgba(0,0,0,0.15);
-      position: relative;
       border: 3px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
     }
 
-    .app-frame .notch {
+    .demo-frame .live-badge {
       position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 120px;
-      height: 24px;
-      background: #1A1A1A;
-      border-radius: 0 0 16px 16px;
-      z-index: 10;
-    }
-
-    .app-frame iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      border-radius: 28px;
-    }
-
-    .app-frame .live-badge {
-      position: absolute;
-      top: 36px;
-      right: 16px;
+      top: 24px;
+      right: 24px;
       background: #E53935;
       color: white;
       padding: 6px 16px;
       border-radius: 6px;
       font-size: 16px;
       font-weight: 700;
-      z-index: 20;
+      z-index: 10;
       letter-spacing: 0.05em;
+    }
+
+    .demo-text {
+      text-align: center;
+      color: #555;
+      font-size: 28px;
+      line-height: 1.5;
+      padding: 40px;
     }
 
     .slide-number {
@@ -164,7 +141,7 @@
       right: 80px;
       font-size: 14px;
       font-weight: 600;
-      color: #888;
+      color: #555;
     }
   </style>
 </head>
@@ -172,31 +149,26 @@
   <div class="slide">
     <div class="section-label">Show Your Work</div>
     <div class="left">
-      <h2>KanaDojo<br><span class="highlight">built with AI</span></h2>
-      <p>A free app that teaches Japanese hiragana and katakana. Animated flashcards, spaced repetition, AI-generated visual mnemonics. Runs entirely in the browser.</p>
+      <h2>Lazgi Hands<br><span class="highlight">built with AI</span></h2>
+      <div class="tagline">An algorithm teaches dance from the land where algorithms were born.</div>
+      <p>Interactive visualization of Khorezm Lazgi dance. Hand tracking via webcam, generative music, ikat-inspired visuals from Uzbek textiles. All running in the browser.</p>
 
       <div class="tech-row">
-        <span class="tech-tag">React</span>
-        <span class="tech-tag">Remotion</span>
-        <span class="tech-tag">SM-2 algorithm</span>
-        <span class="tech-tag">Web Speech API</span>
+        <span class="tech-tag">MediaPipe</span>
+        <span class="tech-tag">Web Audio</span>
+        <span class="tech-tag">Canvas</span>
+        <span class="tech-tag">AI-assisted</span>
       </div>
 
-      <div class="story">
-        <div class="label">How it was built</div>
-        <p>Designed and developed with Claude Code. AI wrote the spaced repetition engine, generated 92 visual mnemonics, helped with animations. I directed product decisions; AI handled implementation.</p>
-      </div>
-
-      <div class="url">olgasafonova.github.io/kanadojo</div>
+      <div class="url">olgasafonova.github.io/lazgi-hands</div>
     </div>
     <div class="right">
-      <div class="app-frame">
-        <div class="notch"></div>
-        <div class="live-badge">LIVE</div>
-        <iframe src="https://olgasafonova.github.io/kanadojo/" loading="lazy"></iframe>
+      <div class="demo-frame">
+        <div class="live-badge">LIVE DEMO</div>
+        <div class="demo-text">Webcam hand tracking<br>+ generative visuals<br>+ Uzbek textile patterns<br><br>Open in browser to demo</div>
       </div>
     </div>
-    <div class="slide-number">9</div>
+    <div class="slide-number">10</div>
   </div>
 </body>
 </html>

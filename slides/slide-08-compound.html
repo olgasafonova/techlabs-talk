@@ -7,7 +7,6 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
 
     body {
       width: 1920px;
@@ -22,12 +21,12 @@
       width: 100%;
       height: 100%;
       display: grid;
-      grid-template-columns: 80px 1fr 80px;
+      grid-template-columns: 80px 1fr 1fr 80px;
       grid-template-rows: 80px auto 1fr 80px;
     }
 
     .section-label {
-      grid-column: 2 / 3;
+      grid-column: 2 / 4;
       grid-row: 2 / 3;
       font-size: 16px;
       font-weight: 600;
@@ -38,63 +37,64 @@
       padding-bottom: 48px;
     }
 
-    .content {
+    .left {
       grid-column: 2 / 3;
       grid-row: 3 / 4;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-content: start;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      padding-right: 64px;
     }
 
     .left h2 {
-      font-size: 48px;
+      font-size: 56px;
       font-weight: 900;
       line-height: 1.1;
       letter-spacing: -0.02em;
-      margin-bottom: 32px;
     }
 
     .left h2 .highlight { color: #E53935; }
 
     .left p {
-      font-size: 24px;
+      font-size: 28px;
       color: #555;
-      line-height: 1.6;
-      margin-bottom: 32px;
+      line-height: 1.5;
     }
 
     .story {
       background: #fff;
       border-left: 4px solid #E53935;
-      padding: 24px 32px;
+      padding: 28px 32px;
       border-radius: 0 8px 8px 0;
     }
 
     .story .label {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 600;
       letter-spacing: 0.1em;
       text-transform: uppercase;
       color: #E53935;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
     }
 
     .story p {
-      font-size: 22px;
+      font-size: 26px;
       color: #444;
       line-height: 1.5;
     }
 
-    /* Skills grid */
+    /* Right side: skills */
     .right {
+      grid-column: 3 / 4;
+      grid-row: 3 / 4;
       display: flex;
       flex-direction: column;
-      gap: 24px;
+      gap: 32px;
+      padding-left: 32px;
     }
 
     .right h3 {
-      font-size: 24px;
+      font-size: 32px;
       font-weight: 700;
       color: #888;
     }
@@ -102,30 +102,30 @@
     .skills-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 12px;
     }
 
     .skill-tag {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 15px;
-      font-weight: 500;
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      font-weight: 600;
       background: #F5F5F5;
       color: #555;
-      padding: 8px 16px;
-      border-radius: 6px;
-      border: 1px solid #E0E0E0;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: 2px solid #E0E0E0;
     }
 
-    .skill-tag.highlight-tag {
+    .skill-tag.accent {
       background: #FFEBEE;
       color: #C62828;
       border-color: #FFCDD2;
     }
 
     .skills-note {
-      font-size: 20px;
-      color: #888;
-      font-style: italic;
+      font-size: 26px;
+      color: #666;
+      line-height: 1.4;
     }
 
     .slide-number {
@@ -141,42 +141,31 @@
 <body>
   <div class="slide">
     <div class="section-label">Compound Effect</div>
-    <div class="content">
-      <div class="left">
-        <h2>AI gets better<br>the more you <span class="highlight">invest</span></h2>
-        <p>Every skill I build makes the next one faster. Every MCP server I connect gives AI more reach. It compounds.</p>
-
-        <div class="story">
-          <div class="label">Real example</div>
-          <p>I built SkillCheck as a side project using my own AI workflow. Validated it. Shipped it. First paying customer within weeks. The AI didn't build the product. It removed the friction between ideas and execution.</p>
-        </div>
+    <div class="left">
+      <h2>AI gets better<br>the more you <span class="highlight">invest</span></h2>
+      <p>Every skill I build makes the next one faster. Every MCP server I connect gives AI more reach. It compounds.</p>
+      <div class="story">
+        <div class="label">Real example</div>
+        <p>I built SkillCheck as a side project using my own AI workflow. Validated it, shipped it, got my first paying customer. AI didn't build the product; it removed friction between ideas and execution.</p>
       </div>
-      <div class="right">
-        <h3>50 skills, some of mine:</h3>
-        <div class="skills-grid">
-          <span class="skill-tag highlight-tag">slide-deck</span>
-          <span class="skill-tag">linkedin-post</span>
-          <span class="skill-tag highlight-tag">diagram</span>
-          <span class="skill-tag">deep-research</span>
-          <span class="skill-tag">youtube-transcript</span>
-          <span class="skill-tag highlight-tag">sift</span>
-          <span class="skill-tag">investigate</span>
-          <span class="skill-tag">feature-scoping</span>
-          <span class="skill-tag">release-prep</span>
-          <span class="skill-tag highlight-tag">brand-assets</span>
-          <span class="skill-tag">publish-docs</span>
-          <span class="skill-tag">bid-intel</span>
-          <span class="skill-tag">edge-cases</span>
-          <span class="skill-tag highlight-tag">mcp-builder</span>
-          <span class="skill-tag">xlsx</span>
-          <span class="skill-tag">competitive</span>
-          <span class="skill-tag">revenue-dashboard</span>
-          <span class="skill-tag">d3js</span>
-          <span class="skill-tag">article-extractor</span>
-          <span class="skill-tag">reddit</span>
-        </div>
-        <p class="skills-note">Each is a reusable recipe. AI reads the recipe, executes the workflow. I write it once; it runs forever.</p>
+    </div>
+    <div class="right">
+      <h3>50 skills, some of mine:</h3>
+      <div class="skills-grid">
+        <span class="skill-tag accent">slide-deck</span>
+        <span class="skill-tag">linkedin-post</span>
+        <span class="skill-tag accent">diagram</span>
+        <span class="skill-tag">deep-research</span>
+        <span class="skill-tag">youtube-transcript</span>
+        <span class="skill-tag accent">sift</span>
+        <span class="skill-tag">investigate</span>
+        <span class="skill-tag">feature-scoping</span>
+        <span class="skill-tag accent">brand-assets</span>
+        <span class="skill-tag">publish-docs</span>
+        <span class="skill-tag">edge-cases</span>
+        <span class="skill-tag accent">mcp-builder</span>
       </div>
+      <p class="skills-note">Each is a reusable recipe. AI reads it, executes the workflow. Write once, runs forever.</p>
     </div>
     <div class="slide-number">8</div>
   </div>

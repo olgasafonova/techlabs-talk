@@ -22,7 +22,7 @@
       height: 100%;
       display: grid;
       grid-template-columns: 80px 1fr 80px;
-      grid-template-rows: 80px auto 1fr 80px;
+      grid-template-rows: 80px auto 1fr auto 80px;
     }
 
     .section-label {
@@ -37,28 +37,16 @@
       padding-bottom: 48px;
     }
 
-    .content {
+    .moves {
       grid-column: 2 / 3;
       grid-row: 3 / 4;
-      display: flex;
-      flex-direction: column;
-      gap: 48px;
-    }
-
-    h2 {
-      font-size: 48px;
-      font-weight: 900;
-      letter-spacing: -0.02em;
-    }
-
-    .moves {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 48px;
     }
 
     .move {
-      border-top: 4px solid #E53935;
+      border-top: 6px solid #E53935;
       padding-top: 32px;
     }
 
@@ -70,31 +58,33 @@
     }
 
     .move h3 {
-      font-size: 32px;
+      font-size: 36px;
       font-weight: 900;
-      margin-bottom: 16px;
+      margin-bottom: 24px;
       letter-spacing: -0.01em;
     }
 
     .move p {
-      font-size: 22px;
+      font-size: 26px;
       color: #555;
       line-height: 1.5;
-      margin-bottom: 16px;
+      margin-bottom: 24px;
     }
 
     .move .tool {
-      font-size: 18px;
+      font-size: 24px;
       color: #888;
-      font-style: italic;
     }
 
     .bottom-note {
-      font-size: 26px;
+      grid-column: 2 / 3;
+      grid-row: 4 / 5;
+      font-size: 28px;
       color: #444;
       line-height: 1.5;
       border-left: 4px solid #E53935;
       padding-left: 24px;
+      padding-bottom: 16px;
     }
 
     .slide-number {
@@ -110,33 +100,28 @@
 <body>
   <div class="slide">
     <div class="section-label">For Your Projects</div>
-    <div class="content">
-      <h2>Three moves you can make this week</h2>
-
-      <div class="moves">
-        <div class="move">
-          <div class="move-number">01</div>
-          <h3>Use AI as a thinking partner</h3>
-          <p>Don't ask "write my code." Ask "here's my approach; what am I missing?" Feed it your project context. Challenge its answers. The better your input, the better the output.</p>
-          <div class="tool">Claude, ChatGPT (free tiers work)</div>
-        </div>
-        <div class="move">
-          <div class="move-number">02</div>
-          <h3>Prototype in hours, not weeks</h3>
-          <p>Describe what you want in plain language. Get an ugly first version. Then iterate: "add error handling," "make the API cleaner," "add tests." Ship rough, refine fast.</p>
-          <div class="tool">Cursor, Claude Code, GitHub Copilot</div>
-        </div>
-        <div class="move">
-          <div class="move-number">03</div>
-          <h3>Connect AI to your stack</h3>
-          <p>Pick one tool your team uses. Find or build an MCP server for it. Now AI doesn't just answer questions about your project; it can act on it.</p>
-          <div class="tool">MCP servers, n8n, APIs</div>
-        </div>
+    <div class="moves">
+      <div class="move">
+        <div class="move-number">01</div>
+        <h3>Use AI as a thinking partner</h3>
+        <p>Don't ask "write my code." Ask "here's my approach; what am I missing?" The better your input, the better the output.</p>
+        <div class="tool">Claude, ChatGPT (free tiers work)</div>
       </div>
-
-      <p class="bottom-note">The skill isn't prompting. The skill is knowing which AI output is good and which is wrong. That comes from building, not from watching tutorials.</p>
+      <div class="move">
+        <div class="move-number">02</div>
+        <h3>Prototype in hours, not weeks</h3>
+        <p>Describe what you want in plain language. Get an ugly first version. Then iterate: "add error handling," "make it cleaner," "add tests."</p>
+        <div class="tool">Cursor, Claude Code, Copilot</div>
+      </div>
+      <div class="move">
+        <div class="move-number">03</div>
+        <h3>Connect AI to your stack</h3>
+        <p>Pick one tool your team uses. Find or build an MCP server for it. Now AI can act on your project, not just talk about it.</p>
+        <div class="tool">MCP servers, n8n, APIs</div>
+      </div>
     </div>
-    <div class="slide-number">10</div>
+    <p class="bottom-note">The skill isn't prompting. The skill is knowing which AI output is good and which is wrong.</p>
+    <div class="slide-number">11</div>
   </div>
 </body>
 </html>

@@ -22,118 +22,103 @@
       width: 100%;
       height: 100%;
       display: grid;
-      grid-template-columns: 80px 1fr 80px;
+      grid-template-columns: 80px 1fr 1fr 80px;
       grid-template-rows: 80px auto 1fr 80px;
     }
 
-    .section-label {
-      grid-column: 2 / 3;
+    .header {
+      grid-column: 2 / 4;
       grid-row: 2 / 3;
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: #E53935;
-      padding-top: 40px;
-      padding-bottom: 48px;
+      padding-top: 80px;
+      padding-bottom: 32px;
     }
 
-    .content {
-      grid-column: 2 / 3;
-      grid-row: 3 / 4;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-content: start;
-    }
-
-    .left h2 {
-      font-size: 48px;
-      font-weight: 900;
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      margin-bottom: 32px;
-    }
-
-    .left h2 .highlight { color: #E53935; }
-
-    .prompt-box {
-      background: #1A1A1A;
-      color: #E0E0E0;
-      border-radius: 12px;
-      padding: 32px;
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 22px;
-      line-height: 1.6;
-      margin-bottom: 32px;
-    }
-
-    .prompt-box .user-prompt {
-      color: #81C784;
-    }
-
-    .steps {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .step {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      font-size: 24px;
-      color: #555;
-      line-height: 1.4;
-    }
-
-    .step-num {
-      background: #E53935;
-      color: white;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 16px;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    /* Demo area - placeholder for GIF */
-    .demo-area {
-      background: #1A1A1A;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 500px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .demo-area img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    .demo-placeholder {
-      color: #555;
-      font-size: 20px;
-      text-align: center;
-    }
-
-    .demo-placeholder .live-badge {
+    .demo-badge {
       display: inline-block;
       background: #E53935;
       color: white;
-      padding: 8px 24px;
-      border-radius: 8px;
+      font-size: 16px;
       font-weight: 700;
-      font-size: 18px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: 72px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.02em;
       margin-bottom: 16px;
+    }
+
+    h1 .highlight { color: #E53935; }
+
+    .demo-type {
+      font-size: 28px;
+      font-weight: 600;
+      color: #888;
+    }
+
+    .content {
+      grid-column: 2 / 4;
+      grid-row: 3 / 4;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+      padding-bottom: 80px;
+    }
+
+    .prompts-title {
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #888;
+      margin-bottom: 24px;
+    }
+
+    .prompt {
+      background: #F0F0F0;
+      padding: 28px;
+      margin-bottom: 16px;
+      font-size: 28px;
+      font-weight: 500;
+      font-family: 'JetBrains Mono', monospace;
+      border-left: 4px solid #E53935;
+      line-height: 1.4;
+    }
+
+    .points-title {
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #888;
+      margin-bottom: 24px;
+    }
+
+    .point-list {
+      list-style: none;
+    }
+
+    .point-list li {
+      font-size: 32px;
+      font-weight: 400;
+      color: #333;
+      padding: 14px 0;
+      padding-left: 36px;
+      position: relative;
+    }
+
+    .point-list li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #E53935;
+      font-weight: 700;
     }
 
     .slide-number {
@@ -148,38 +133,30 @@
 </head>
 <body>
   <div class="slide">
-    <div class="section-label">Demo 1</div>
+    <div class="header">
+      <div class="demo-badge">Demo 1</div>
+      <h1>AI queries a <span class="highlight">live database</span></h1>
+      <div class="demo-type">2.8 million companies, 200+ countries</div>
+    </div>
+
     <div class="content">
-      <div class="left">
-        <h2>AI queries a <span class="highlight">live database</span></h2>
-        <div class="prompt-box">
-          <span class="user-prompt">&gt; Who is Apple Inc, legally?<br>&gt; Give me their global identifier.</span>
-        </div>
-        <div class="steps">
-          <div class="step">
-            <div class="step-num">1</div>
-            <div>I type a plain English question</div>
-          </div>
-          <div class="step">
-            <div class="step-num">2</div>
-            <div>AI calls the GLEIF API (2.8M companies, 200+ countries)</div>
-          </div>
-          <div class="step">
-            <div class="step-num">3</div>
-            <div>Returns structured data: legal name, registration, status</div>
-          </div>
-        </div>
+      <div class="prompts">
+        <div class="prompts-title">Live Prompts</div>
+        <div class="prompt">"Who is Apple Inc, legally? Give me their global identifier."</div>
+        <div class="prompt">"Who is Apple's ultimate parent company?"</div>
       </div>
-      <div class="demo-area">
-        <!-- Replace with GIF: demos/gleif-demo.gif -->
-        <div class="demo-placeholder">
-          <div class="live-badge">LIVE DEMO</div>
-          <p>AI → GLEIF API → Company data<br><br>
-          No web search. Direct API call.<br>
-          Real data, not a summary of a webpage.</p>
-        </div>
+
+      <div class="talking-points">
+        <div class="points-title">What Happens</div>
+        <ul class="point-list">
+          <li>AI calls a real financial API</li>
+          <li>Returns structured data, not a web search</li>
+          <li>Legal name, registration, ownership chain</li>
+          <li>Same MCP standard as every other demo</li>
+        </ul>
       </div>
     </div>
+
     <div class="slide-number">5</div>
   </div>
 </body>
