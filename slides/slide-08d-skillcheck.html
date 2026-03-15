@@ -83,6 +83,26 @@
       line-height: 1.5;
     }
 
+    .url-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .qr {
+      width: 120px;
+      height: 120px;
+      background: #fff;
+      padding: 8px;
+      border-radius: 8px;
+      border: 2px solid #E0E0E0;
+    }
+
+    .qr img {
+      width: 100%;
+      height: 100%;
+    }
+
     .url {
       font-size: 26px;
       color: #888;
@@ -149,7 +169,10 @@
         <p>Built the first version with the same AI workflow I use for everything else. Validated it by using it on my own skills. Shipped it. Got my first paying customer without any paid marketing.</p>
       </div>
 
-      <div class="url">getskillcheck.com</div>
+      <div class="url-row">
+        <div class="qr"><img src="icons/qr-skillcheck.svg" alt="QR"></div>
+        <div class="url">getskillcheck.com</div>
+      </div>
     </div>
     <div class="right">
       <div class="app-embed">
