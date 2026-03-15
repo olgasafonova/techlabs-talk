@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <title>Slide - SkillCheck</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #FAFAFA;
+      color: #1A1A1A;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 80px 1fr 1fr 80px;
+      grid-template-rows: 80px auto 1fr 80px;
+    }
+
+    .section-label {
+      grid-column: 2 / 4;
+      grid-row: 2 / 3;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #E53935;
+      padding-top: 40px;
+      padding-bottom: 48px;
+    }
+
+    .left {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      padding-right: 64px;
+    }
+
+    .left h2 {
+      font-size: 56px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .left h2 .highlight { color: #E53935; }
+
+    .left p {
+      font-size: 28px;
+      color: #555;
+      line-height: 1.5;
+    }
+
+    .story {
+      background: #fff;
+      border-left: 4px solid #E53935;
+      padding: 28px 32px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .story .label {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #E53935;
+      margin-bottom: 12px;
+    }
+
+    .story p {
+      font-size: 26px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .url {
+      font-size: 26px;
+      color: #888;
+    }
+
+    .right {
+      grid-column: 3 / 4;
+      grid-row: 3 / 4;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding-left: 32px;
+      padding-top: 8px;
+    }
+
+    .right h3 {
+      font-size: 36px;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .flow {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .flow-step {
+      border-left: 4px solid #E53935;
+      padding-left: 24px;
+    }
+
+    .flow-step-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .flow-step-desc {
+      font-size: 26px;
+      color: #555;
+      line-height: 1.4;
+    }
+
+    .slide-number {
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="section-label">Some Things I've Built</div>
+    <div class="left">
+      <h2>SkillCheck<br><span class="highlight">from side project to product</span></h2>
+      <p>A validator for AI skills. Checks structure, quality, anti-patterns. Started as something I needed for my own work. Turned into a product with paying customers.</p>
+
+      <div class="story">
+        <div class="label">The loop</div>
+        <p>Built the first version with the same AI workflow I use for everything else. Validated it by using it on my own skills. Shipped it. Got my first paying customer without any marketing.</p>
+      </div>
+
+      <div class="url">getskillcheck.com</div>
+    </div>
+    <div class="right">
+      <h3>From itch to income</h3>
+      <div class="flow">
+        <div class="flow-step">
+          <div class="flow-step-title">Had a problem</div>
+          <div class="flow-step-desc">My AI skills had inconsistent quality. No way to check them.</div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-title">Built a tool</div>
+          <div class="flow-step-desc">Validator that catches structural issues and anti-patterns.</div>
+        </div>
+        <div class="flow-step">
+          <div class="flow-step-title">Others wanted it</div>
+          <div class="flow-step-desc">Open sourced the free version. Built a Pro tier. First sale followed.</div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-number">11</div>
+  </div>
+</body>
+</html>
