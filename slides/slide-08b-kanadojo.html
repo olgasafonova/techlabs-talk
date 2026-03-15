@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1920, height=1080">
+  <title>Slide 08b - KanaDojo</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
+
+    body {
+      width: 1920px;
+      height: 1080px;
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #FAFAFA;
+      color: #1A1A1A;
+      overflow: hidden;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 80px 1fr 1fr 80px;
+      grid-template-rows: 80px auto 1fr 80px;
+    }
+
+    .section-label {
+      grid-column: 2 / 4;
+      grid-row: 2 / 3;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #E53935;
+      padding-top: 40px;
+      padding-bottom: 48px;
+    }
+
+    .left {
+      grid-column: 2 / 3;
+      grid-row: 3 / 4;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      padding-right: 64px;
+    }
+
+    .left h2 {
+      font-size: 48px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    .left h2 .highlight { color: #E53935; }
+
+    .left p {
+      font-size: 24px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tech-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 15px;
+      font-weight: 500;
+      background: #F5F5F5;
+      color: #555;
+      padding: 8px 16px;
+      border-radius: 6px;
+      border: 1px solid #E0E0E0;
+    }
+
+    .story {
+      background: #fff;
+      border-left: 4px solid #E53935;
+      padding: 24px 32px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .story .label {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #E53935;
+      margin-bottom: 8px;
+    }
+
+    .story p {
+      font-size: 20px;
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .url {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 20px;
+      color: #888;
+    }
+
+    /* App preview */
+    .right {
+      grid-column: 3 / 4;
+      grid-row: 3 / 4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-left: 32px;
+    }
+
+    .app-frame {
+      width: 440px;
+      height: 780px;
+      background: #1A1A1A;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0,0,0,0.15);
+      position: relative;
+      border: 3px solid #333;
+    }
+
+    .app-frame .notch {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 24px;
+      background: #1A1A1A;
+      border-radius: 0 0 16px 16px;
+      z-index: 10;
+    }
+
+    .app-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 28px;
+    }
+
+    .app-frame .live-badge {
+      position: absolute;
+      top: 36px;
+      right: 16px;
+      background: #E53935;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      z-index: 20;
+      letter-spacing: 0.05em;
+    }
+
+    .slide-number {
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide">
+    <div class="section-label">Show Your Work</div>
+    <div class="left">
+      <h2>KanaDojo<br><span class="highlight">built with AI</span></h2>
+      <p>A free app that teaches Japanese hiragana and katakana. Animated flashcards, spaced repetition, AI-generated visual mnemonics. Runs entirely in the browser.</p>
+
+      <div class="tech-stack">
+        <span class="tech-tag">React</span>
+        <span class="tech-tag">Remotion</span>
+        <span class="tech-tag">SM-2 algorithm</span>
+        <span class="tech-tag">Web Speech API</span>
+        <span class="tech-tag">AI mnemonics</span>
+      </div>
+
+      <div class="story">
+        <div class="label">How it was built</div>
+        <p>Designed and developed with Claude Code. AI wrote the spaced repetition engine, generated 92 visual mnemonics, and helped with the animation system. I directed the product decisions; AI handled the implementation friction.</p>
+      </div>
+
+      <div class="url">olgasafonova.github.io/kanadojo</div>
+    </div>
+    <div class="right">
+      <div class="app-frame">
+        <div class="notch"></div>
+        <div class="live-badge">LIVE</div>
+        <iframe src="https://olgasafonova.github.io/kanadojo/" loading="lazy"></iframe>
+      </div>
+    </div>
+    <div class="slide-number">9</div>
+  </div>
+</body>
+</html>
