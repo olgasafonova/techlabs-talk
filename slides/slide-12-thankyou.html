@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1920, height=1080">
-  <title>Slide - Thank You</title>
+  <title>Slide 13 - Thank You</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
@@ -12,109 +12,70 @@
       width: 1920px;
       height: 1080px;
       font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background: #FAFAFA;
-      color: #1A1A1A;
+      background: #1A1A1A;
+      color: #FAFAFA;
       overflow: hidden;
+      position: relative;
     }
 
     .slide {
       width: 100%;
       height: 100%;
-      display: grid;
-      grid-template-columns: 80px 1fr 80px;
-      grid-template-rows: 80px auto auto 1fr 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 80px;
+    }
+
+    .thank-you {
+      font-size: 96px;
+      font-weight: 900;
+      color: #E53935;
+      margin-bottom: 48px;
+    }
+
+    .presenter {
+      font-size: 48px;
+      font-weight: 900;
+      color: #FAFAFA;
+      margin-bottom: 12px;
+    }
+
+    .presenter-title {
+      font-size: 24px;
+      color: #666;
+      text-align: center;
+      margin-bottom: 64px;
+      line-height: 1.5;
     }
 
     .section-label {
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: #E53935;
-      padding-top: 40px;
-      padding-bottom: 40px;
-    }
-
-    h1 {
-      grid-column: 2 / 3;
-      grid-row: 3 / 4;
-      font-size: 80px;
-      font-weight: 900;
-      line-height: 1.05;
-      letter-spacing: -0.03em;
-      padding-bottom: 56px;
-    }
-
-    h1 .highlight { color: #E53935; }
-    h1 .muted { color: #888; font-size: 48px; }
-
-    .columns {
-      grid-column: 2 / 3;
-      grid-row: 4 / 5;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-content: start;
-    }
-
-    .col p {
-      font-size: 28px;
-      color: #444;
-      line-height: 1.5;
-      margin-bottom: 24px;
-    }
-
-    .seed-questions {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .seed-label {
-      font-size: 24px;
+      font-size: 48px;
       font-weight: 700;
-      color: #888;
-      margin-bottom: 8px;
-    }
-
-    .seed-q {
-      font-size: 26px;
+      letter-spacing: -0.01em;
       color: #555;
-      line-height: 1.4;
-      padding-left: 28px;
-      position: relative;
+      margin-bottom: 40px;
     }
 
-    .seed-q::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: #E53935;
-      font-weight: 700;
-    }
-
-    /* QR codes */
     .qr-section {
       display: flex;
-      gap: 40px;
+      gap: 64px;
     }
 
     .qr-item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 16px;
     }
 
     .qr-code {
-      width: 160px;
-      height: 160px;
-      background: #fff;
-      padding: 12px;
+      width: 220px;
+      height: 220px;
+      background: #FAFAFA;
+      padding: 16px;
       border-radius: 8px;
-      border: 2px solid #E0E0E0;
     }
 
     .qr-code img {
@@ -123,9 +84,30 @@
     }
 
     .qr-label {
-      font-size: 24px;
+      font-size: 18px;
       font-weight: 600;
       color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .qr-logo {
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .qr-logo img {
+      height: 40px;
+      width: 40px;
+      object-fit: contain;
+    }
+
+    .qr-logo img.substack {
+      height: 56px;
+      width: 56px;
     }
 
     .slide-number {
@@ -134,40 +116,40 @@
       right: 80px;
       font-size: 14px;
       font-weight: 600;
-      color: #888;
+      color: #666;
     }
   </style>
 </head>
 <body>
   <div class="slide">
-    <div class="section-label">Thank You</div>
+    <div class="thank-you">Thank you!</div>
 
-    <h1>Olga Safonova<br><span class="muted">Questions?</span></h1>
+    <div class="presenter">Olga Safonova</div>
+    <div class="presenter-title">25+ years in tech. Digital, data, marketing, design, product.<br>Lead Product Manager at Tieto &middot; Open source MCP servers</div>
 
-    <div class="columns">
-      <div class="col">
-        <div class="seed-questions">
-          <div class="seed-label">If you're stuck, ask me about:</div>
-          <div class="seed-q">What AI tools are you using in your TechLabs project?</div>
-          <div class="seed-q">What's been frustrating about AI in your coursework?</div>
-          <div class="seed-q">How do I pick which AI tool to learn first?</div>
+    <div class="section-label">Connect</div>
+
+    <div class="qr-section">
+      <div class="qr-item">
+        <div class="qr-code">
+          <img src="icons/qr-linkedin.svg" alt="LinkedIn QR">
         </div>
+        <div class="qr-label">LinkedIn</div>
+        <div class="qr-logo"><img src="icons/logo-linkedin.png" alt="LinkedIn"></div>
       </div>
-      <div class="col">
-        <div class="qr-section">
-          <div class="qr-item">
-            <div class="qr-code"><img src="icons/qr-linkedin.svg" alt="LinkedIn QR"></div>
-            <div class="qr-label">LinkedIn</div>
-          </div>
-          <div class="qr-item">
-            <div class="qr-code"><img src="icons/qr-github.svg" alt="GitHub QR"></div>
-            <div class="qr-label">GitHub</div>
-          </div>
-          <div class="qr-item">
-            <div class="qr-code"><img src="icons/qr-substack.svg" alt="Substack QR"></div>
-            <div class="qr-label">Substack</div>
-          </div>
+      <div class="qr-item">
+        <div class="qr-code">
+          <img src="icons/qr-github.svg" alt="GitHub QR">
         </div>
+        <div class="qr-label">GitHub</div>
+        <div class="qr-logo"><img src="icons/logo-github.png" alt="GitHub"></div>
+      </div>
+      <div class="qr-item">
+        <div class="qr-code">
+          <img src="icons/qr-substack.svg" alt="Substack QR">
+        </div>
+        <div class="qr-label">Substack</div>
+        <div class="qr-logo"><img src="icons/logo-substack.png" alt="Substack" class="substack"></div>
       </div>
     </div>
 
