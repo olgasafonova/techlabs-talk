@@ -54,15 +54,6 @@
     .stage:nth-child(3) { border-color: #E57373; }
     .stage:nth-child(4) { border-color: #E53935; }
 
-    .stage-level {
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: #888;
-      margin-bottom: 12px;
-    }
-
     .stage-title {
       font-size: 48px;
       font-weight: 900;
@@ -70,11 +61,12 @@
       letter-spacing: -0.02em;
     }
 
-    .stage-desc {
+    .stage-example {
       font-size: 28px;
-      color: #555;
+      color: #444;
       line-height: 1.4;
       margin-bottom: 24px;
+      font-style: italic;
     }
 
     .stage-tools {
@@ -108,31 +100,27 @@
     <div class="section-label">The Progression</div>
     <div class="stages">
       <div class="stage">
-        <div class="stage-level">Level 1</div>
         <div class="stage-title">Chat</div>
-        <div class="stage-desc">Ask a question, get an answer, copy-paste it</div>
+        <div class="stage-example">"Explain this error message to me"</div>
         <div class="stage-tools">ChatGPT, Claude</div>
       </div>
       <div class="stage">
-        <div class="stage-level">Level 2</div>
         <div class="stage-title">Assist</div>
-        <div class="stage-desc">AI in your editor, autocomplete, explain code</div>
+        <div class="stage-example">"You write code while AI autocompletes and explains"</div>
         <div class="stage-tools">Copilot, Cursor</div>
       </div>
       <div class="stage">
-        <div class="stage-level">Level 3</div>
         <div class="stage-title">Agent</div>
-        <div class="stage-desc">AI runs tasks, edits files, calls external APIs</div>
+        <div class="stage-example">"Edit these 5 files, run the tests, fix what breaks"</div>
         <div class="stage-tools">Claude Code, MCP</div>
       </div>
       <div class="stage">
-        <div class="stage-level">Level 4</div>
         <div class="stage-title">System</div>
-        <div class="stage-desc">Skills chain together, AI learns your patterns</div>
+        <div class="stage-example">"You say /release-prep and it does 20 steps for you"</div>
         <div class="stage-tools">Custom skills, workflows</div>
       </div>
     </div>
-    <p class="bottom-note"><strong>You don't need Level 4 to be effective.</strong> Most of my productivity comes from Levels 2 and 3.</p>
+    <p class="bottom-note"><strong>Most of my productivity comes from columns 2 and 3.</strong> You don't need to build a system to get value.</p>
     <div class="slide-number">7</div>
   </div>
 </body>
