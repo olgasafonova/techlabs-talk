@@ -3,15 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1920, height=1080">
-  <title>Slide 09 - Demo 1: GLEIF</title>
+  <title>Demo 1: GLEIF</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
 
     body {
       width: 1920px;
@@ -29,7 +25,6 @@
       display: grid;
       grid-template-columns: 80px 1fr 1fr 80px;
       grid-template-rows: 80px auto 1fr 80px;
-      padding: 0;
     }
 
     .logo {
@@ -43,17 +38,6 @@
       height: 64px;
       width: 64px;
       display: block;
-    }
-
-    .tier-badge {
-      position: absolute;
-      top: 80px;
-      left: 80px;
-      font-size: 16px;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #888;
     }
 
     .header {
@@ -83,8 +67,10 @@
       margin-bottom: 16px;
     }
 
+    h1 .highlight { color: #E53935; }
+
     .demo-type {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: 600;
       color: #888;
     }
@@ -99,12 +85,8 @@
       padding-bottom: 80px;
     }
 
-    .prompts {
-      padding-top: 16px;
-    }
-
     .prompts-title {
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -123,12 +105,8 @@
       line-height: 1.5;
     }
 
-    .talking-points {
-      padding-top: 16px;
-    }
-
     .points-title {
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -141,11 +119,11 @@
     }
 
     .point-list li {
-      font-size: 28px;
+      font-size: 32px;
       font-weight: 400;
       color: #333;
-      padding: 12px 0;
-      padding-left: 32px;
+      padding: 14px 0;
+      padding-left: 36px;
       position: relative;
     }
 
@@ -175,29 +153,29 @@
 
     <div class="header">
       <div class="demo-badge">Demo 1</div>
-      <h1>GLEIF</h1>
-      <div class="demo-type">Cloud App Pattern</div>
+      <h1>AI queries a <span class="highlight">live database</span></h1>
+      <div class="demo-type">2.8 million companies, 200+ countries</div>
     </div>
 
     <div class="content">
       <div class="prompts">
         <div class="prompts-title">What I'll Say</div>
-        <div class="prompt">"Use the GLEIF server to look up Apple Inc's LEI"</div>
-        <div class="prompt">"Who is Apple's ultimate parent company according to GLEIF?"</div>
+        <div class="prompt">"Who is Apple Inc, legally? Give me their global identifier."</div>
+        <div class="prompt">"Who is Apple's ultimate parent company?"</div>
       </div>
 
       <div class="talking-points">
-        <div class="points-title">Under the Hood</div>
+        <div class="points-title">What Happens</div>
         <ul class="point-list">
-          <li>Data lives in the cloud (GLEIF API)</li>
-          <li>Lookup, validate, trace ownership</li>
-          <li>Structured output, not web scraping</li>
-          <li>Real financial identifiers (LEI)</li>
+          <li>AI calls a real financial API</li>
+          <li>Returns structured data, not a web search</li>
+          <li>Legal name, registration, ownership chain</li>
+          <li>Same MCP standard as every other demo</li>
         </ul>
       </div>
     </div>
 
-    <div class="slide-number">10</div>
+    <div class="slide-number">7</div>
   </div>
 </body>
 </html>
