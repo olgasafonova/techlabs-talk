@@ -22,7 +22,7 @@
       height: 100%;
       display: grid;
       grid-template-columns: 80px 1fr 80px;
-      grid-template-rows: 80px auto 1fr 80px;
+      grid-template-rows: 80px auto 1fr auto 80px;
     }
 
     .section-label {
@@ -37,42 +37,41 @@
       padding-bottom: 48px;
     }
 
-    .content {
+    .quote {
       grid-column: 2 / 3;
       grid-row: 3 / 4;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-content: start;
-    }
-
-    .left h2 {
-      font-size: 56px;
-      font-weight: 900;
-      line-height: 1.1;
-      letter-spacing: -0.02em;
-      margin-bottom: 40px;
-    }
-
-    .left h2 .highlight { color: #E53935; }
-    .left p .highlight { color: #E53935; font-weight: 900; }
-
-    .left p {
-      font-size: 28px;
-      color: #444;
-      line-height: 1.6;
-    }
-
-    .right {
       display: flex;
-      flex-direction: column;
-      gap: 40px;
-      padding-top: 8px;
+      align-items: center;
+    }
+
+    .quote p {
+      font-size: 64px;
+      font-weight: 900;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      max-width: 1400px;
+    }
+
+    .quote .highlight {
+      color: #E53935;
+    }
+
+    .steps {
+      grid-column: 2 / 3;
+      grid-row: 4 / 5;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 32px;
+      padding-bottom: 24px;
     }
 
     .step {
-      padding-left: 0;
+      border-top: 6px solid #CCC;
+      padding-top: 24px;
     }
+
+    .step:nth-child(3) { border-color: #E57373; }
+    .step:nth-child(4) { border-color: #E53935; }
 
     .step-title {
       font-size: 32px;
@@ -81,7 +80,7 @@
     }
 
     .step-desc {
-      font-size: 26px;
+      font-size: 24px;
       color: #555;
       line-height: 1.4;
     }
@@ -99,28 +98,25 @@
 <body>
   <div class="slide">
     <div class="section-label">The Principle</div>
-    <div class="content">
-      <div class="left">
-        <h2>It <span class="highlight">compounds</span></h2>
-        <p>Every project teaches you something the next project needs. Every mistake sharpens your judgement. The tools change every few months. What compounds is <span class="highlight">you</span>.</p>
+    <div class="quote">
+      <p>The tools change every few months. What compounds is <span class="highlight">you</span>.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-title">Try</div>
+        <div class="step-desc">Pick a real problem. Use AI to solve it. Ship something ugly.</div>
       </div>
-      <div class="right">
-        <div class="step">
-          <div class="step-title">Try</div>
-          <div class="step-desc">Pick a real problem. Use AI to solve it. Ship something ugly.</div>
-        </div>
-        <div class="step">
-          <div class="step-title">Learn</div>
-          <div class="step-desc">Notice what AI got wrong. Figure out why. That's the actual skill.</div>
-        </div>
-        <div class="step">
-          <div class="step-title">Iterate</div>
-          <div class="step-desc">Next project goes faster because you know what to ask for and what to check.</div>
-        </div>
-        <div class="step">
-          <div class="step-title">Save</div>
-          <div class="step-desc">When a pattern works, save it as a skill. A reusable recipe AI follows every time.</div>
-        </div>
+      <div class="step">
+        <div class="step-title">Learn</div>
+        <div class="step-desc">Notice what AI got wrong. Figure out why.</div>
+      </div>
+      <div class="step">
+        <div class="step-title">Iterate</div>
+        <div class="step-desc">Next project goes faster because you know what to check.</div>
+      </div>
+      <div class="step">
+        <div class="step-title">Save</div>
+        <div class="step-desc">When a pattern works, save it as a reusable recipe.</div>
       </div>
     </div>
     <div class="slide-number">8</div>
